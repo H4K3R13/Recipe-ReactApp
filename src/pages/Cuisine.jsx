@@ -8,7 +8,7 @@ function Cuisine() {
     let params = useParams();
 
     const getCuisine = async (name) => {
-        const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cusine=${name}`);
+        const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}`);
         const recipes = await data.json();
         setCuisine(recipes.results);
 
@@ -36,12 +36,12 @@ function Cuisine() {
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
-  grid-gap; 3rem;
+  grid-gap; 4rem;
 `;
 
 const Card = styled.div`
   img{
-    width:100%
+    width:95%;
     border-radius: 2rem;
   }
   a{
