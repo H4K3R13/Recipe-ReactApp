@@ -36,7 +36,12 @@ function Searched() {
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
-  grid-gap; 4rem;
+  grid-gap: 4rem;
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
+    grid-gap: 2rem;
+  }
 `;
 
 const Card = styled.div`
@@ -51,7 +56,16 @@ const Card = styled.div`
     text-align: center;
     padding: 1rem;
   }
+
+  @media only screen and (max-width: 576px) {
+    img {
+      width: 100%;
+      max-width: 20rem;
+      height: auto;
+    }
+  }
 `;
+
 
 
 export default Searched

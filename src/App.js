@@ -27,6 +27,10 @@ const Logo = styled(Link)`
   font-size: 1.5rem;
   font-weight: 500;
   font-family: 'Lobster Two', cursive;
+  
+  @media only screen and (max-width: 576px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const Nav = styled.div`
@@ -37,6 +41,11 @@ const Nav = styled.div`
   svg{
     font-size:2rem;
   }
+  
+  @media only screen and (max-width: 576px) {
+    padding: 2rem 0rem;
+  }
 `;
+
 
 export default App;

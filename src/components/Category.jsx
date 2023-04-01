@@ -29,6 +29,10 @@ const List = styled.div`
     display: flex;
     justify-content: center;
     margin: 2rem 0rem;
+
+    @media only screen and (max-width: 768px) {
+        flex-wrap: wrap;
+    }
 `;
 
 const SLink = styled(NavLink)`
@@ -53,6 +57,7 @@ const SLink = styled(NavLink)`
         color:white;
         font-size: 1.5rem;
     }
+
     &.active{
         background: linear-gradient(to right,#f27121,#e94057);
 
@@ -62,6 +67,11 @@ const SLink = styled(NavLink)`
         h4{
             color:white;
         }
+    }
+
+    @media only screen and (max-width: 768px) {
+        margin-right: 1rem;
+        margin-bottom: 1rem;
     }
 `;
 

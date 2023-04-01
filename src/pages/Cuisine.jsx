@@ -44,22 +44,35 @@ function Cuisine() {
 
 const Grid = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
-  grid-gap; 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 4rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    grid-gap: 2rem;
+  }
 `;
 
 const Card = styled.div`
-  img{
-    width:95%;
+  img {
+    width: 95%;
     border-radius: 2rem;
   }
-  a{
-    text-decoration:none;
+
+  a {
+    text-decoration: none;
   }
-  h4{
+
+  h4 {
     text-align: center;
     padding: 1rem;
+    font-size: 1.2rem;
   }
 `;
+
 
 export default Cuisine

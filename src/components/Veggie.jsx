@@ -62,42 +62,62 @@ const Wrapper = styled.div`
 `;
 
 const Card = styled.div`
-  min-height: 25rem ;
-  border-radius: 2rem ;
-  over-flow:hidden;
+  min-height: 25rem;
+  border-radius: 2rem;
+  overflow: hidden;
   position: relative;
 
-  img{
+  img {
     border-radius: 3rem;
     position: absolute;
-    left:0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  p{
-    position:absolute;
+
+  p {
+    position: absolute;
     z-index: 10;
     left: 50%;
     bottom: 0%;
-    transform:translate(-50%,0%);
-    color:white;
-    text-align:center;
-    font-weight:600;
-    font-size:1rem;
-    height:40%;
-    display:flex;
-    justify-contents:center;
-    align-items:center;
+    transform: translate(-50%, 0%);
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 768px) {
+    min-height: 20rem;
+    border-radius: 1.5rem;
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    min-height: 15rem;
+    border-radius: 1rem;
+
+    p {
+      font-size: 0.7rem;
+    }
   }
 `;
 
 const Gradient = styled.div`
-  z-index:3;
-  position:absolute;
-  width:100%;
-  height:100%;
-  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 `;
+
 
 export default Veggie

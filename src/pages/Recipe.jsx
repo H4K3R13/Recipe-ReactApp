@@ -55,35 +55,63 @@ const DetailedWrapper = styled.div`
   margin-top: 10rem;
   margin-bottom: 5rem;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  
   .active{
     background: linear-gradient(35deg, #494949, #313131);
     color: white;
   }
+  
   img{
-    border-radius:2rem;
-  }
-  h2{
+    border-radius: 2rem;
+    width: 100%;
+    max-width: 800px;
     margin-bottom: 2rem;
   }
+  
+  h2{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
   li{
     font-size: 1.2rem;
     line-height:2.5rem;
   }
+  
   ul{
     margin-top: 2rem;
+    text-align: center;
+    padding-inline-start: 0;
   }
 `;
 
 const Button = styled.button`
-  padding:1rem 2rem;
-  color:#313131;
+  padding: 1rem 2rem;
+  color: #313131;
   background: white;
-  border:2px solid black;
+  border: 2px solid black;
   margin-right: 2rem;
   font-weight: 600;
 `;
 
 const Info = styled.div`
-  margin-left:5rem;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  ${Button} {
+    margin: 1rem;
+  }
 `;
+
 export default Recipe;
